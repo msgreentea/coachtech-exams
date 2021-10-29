@@ -1,0 +1,11 @@
+問題１
+1 php
+2 Model
+3 View
+4 Controller
+5 リクエスト処理
+6 create
+7 read
+8 update
+9 ルーティング
+10 blade
