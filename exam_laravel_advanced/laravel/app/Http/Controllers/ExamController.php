@@ -20,7 +20,6 @@ class ExamController extends Controller
             'email' => $request->email,
         ];
         // return redirect('/');
-        return view('thanks');
         return view('thanks', ('param'));
     }
 }
