@@ -1,0 +1,9 @@
+1 ORM
+2 Eloquent
+3 Composer?DBクラス?
+4 CREATE
+5 READ
+6 UPDATE
+7 .env
+8 マイグレーション
+9 ファクトリ
