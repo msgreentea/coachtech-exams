@@ -10,11 +10,11 @@ class ExamController extends Controller
 {
     public function index()
     {
-        DB::insert('insert into users (name, email) values (:name, :email)');
-        return view('thanks');
+        return view('index');
     }
     public function thanks(Request $request)
     {
+        DB::insert('insert into second_users (name, email) values (:name, :email)');
         $param = [
             'name' => $request->name,
             'email' => $request->email,

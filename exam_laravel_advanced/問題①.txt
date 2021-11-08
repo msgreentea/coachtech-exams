@@ -1,9 +1,9 @@
-1 ORM
+1 ORM　クエリビルダ ->
 2 Eloquent
-3 Composer?DBクラス?
+3 Model
 4 CREATE
 5 READ
 6 UPDATE
 7 .env
 8 マイグレーション
-9 ファクトリ
+9 シーダー（ファクトリ）
