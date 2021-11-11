@@ -15,9 +15,25 @@ class ConsumerController extends Controller
     {
         // $recipe = App\Recipe::create(['recipe_name' => 'カレーライス']);
         // laravel応用７章参照した
-        $items = item::all();
+        // $items = item::all();
         // Item::all($form);
-        return view('thanks', ['items' => $items]);
+
+        // Itemのmodelクラスのインスタンスを生成
+        $item = new Item();
+        // データベースに値をinsert。
+        $item->create([
+            'name' => 'testname',
+            'email' => 'test@gmail.com'
+        ]);
+        // ↓保存したデータを$modelに格納。バージョン
+        // $model = $user->create([
+        //     'name' => 'testname',
+        //     'email' => 'test@gmail.com'
+        // ]);
+        // ↓insertしたItemのデータを使いたい場合
+        // dd($model->name) <-結果：testname
+
+        return view('thanks', ['item' => $item]);
     }
     public function show(Request $request)
     {

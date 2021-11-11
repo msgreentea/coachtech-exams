@@ -19,9 +19,9 @@ class Item extends Model
         'email' => 'required|max:30'
     );
     // ７章参照
-    public function getDetail()
-    {
-        $txt = 'ID:' . $this->id . ' ' . $this->name . '(' . $this->age .  '才' . ') ' . $this->nationality;
-        return $txt;
-    }
+    // public function getDetail()
+    // {
+    //     $txt = 'ID:' . $this->id . ' ' . $this->name . '(' . $this->age .  '才' . ') ' . $this->nationality;
+    //     return $txt;
+    // }
 }
