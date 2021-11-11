@@ -13,10 +13,14 @@ class ConsumerController extends Controller
     }
     public function register(Request $request)
     {
+        // $recipe = App\Recipe::create(['recipe_name' => 'カレーライス']);
+        // laravel応用７章参照した
         $items = item::all();
+        // Item::all($form);
         return view('thanks', ['items' => $items]);
     }
-    // public function show(Request $request)
-    // {
-    // }
+    public function show(Request $request)
+    {
+        return view('thanks');
+    }
 }
