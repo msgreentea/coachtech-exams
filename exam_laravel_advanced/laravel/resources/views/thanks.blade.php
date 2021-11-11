@@ -8,6 +8,6 @@
 </head>
 <body>
     <p>{{$txt}}</p>
-    <a href="/">トップへ戻る</a>
+    <a href="/index">トップへ戻る</a>
 </body>
 </html>
