@@ -1,9 +1,9 @@
 {{-- @extends('index') --}}
 {{-- @section('content') --}}
 <table>
-    <tr>
+    {{-- <tr>
         <th>Items</th>
-    </tr>
+    </tr> --}}
     @foreach ($posts as $post)
     <tr>
         <th>{{ $posts->name }}</th>
