@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Item;
+use App\Http\Requests\ItemRequest;
 
 class ConsumerController extends Controller
 {
@@ -11,24 +12,28 @@ class ConsumerController extends Controller
     {
         return view('index');
     }
-    public function register(Request $request)
+    public function register(ItemRequest $request)
     {
-        // $name = request('name');
-        // $email = request('email');
-        $post = new Item;
-        // $post->name = $request->name;
-        // $post->email = $request->email;
-        // $post->save();
-        $posts = Item::all();
-        // $item = Item::orderBy('name', 'asc')->get();
-        // ↓insertしたItemのデータを使いたい場合
-        // dd($model->name) <-結果：testname
+        // 重複を防止するやつ？
+        // \DB::beginTransaction();
+        // try {
+        //     $item = Item::create($show);
+        //     \DB::commit();
+        // } catch (\Throwable $e) {
+        //     \DB::rollback();
+        // }
 
-        // return view('thanks', ['posts' => $posts]);
+        // dd($request->all());
+
+        $posts = new Item;
+        $posts->name = $request->name;
+        $posts->email = $request->email;
+
+        $validation = [
+            'name' => 'required',
+            'email' => 'required | max:30'
+        ];
+        $this->validate($request, $validation);
         return view('thanks', compact('posts'));
     }
-    // public function show(Request $request)
-    // {
-    //     return view('thanks');
-    // }
 }

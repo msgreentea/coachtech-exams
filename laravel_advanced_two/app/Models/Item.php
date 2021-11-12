@@ -12,6 +12,7 @@ class Item extends Model
     // テーブル名
     // protected $table = 'items';
     //  複数代入
+    protected $guarded = ['id'];
     protected $fillable = ['name', 'email'];
     // validation
     public static $rules = array(
@@ -21,7 +22,7 @@ class Item extends Model
     // 取得した値を加工する場合
     // public function メソッド名()
     // {
-    //     $txt = 'ID:' . $this->id . ' ' . $this->name . '(' . $this->age .  '才' . ') ' . $this->nationality;
+    //     $posts = 'ID:' . $this->id . ' ' . $this->name . '(' . $this->email .   ') ';
     //     return $txt;
     // }
 }

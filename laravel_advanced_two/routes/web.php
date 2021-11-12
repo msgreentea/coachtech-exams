@@ -8,5 +8,3 @@ use App\Http\Controllers\ConsumerController;
 Route::get('/', [ConsumerController::class, 'index'])->name('home');
 // 入力、お問い合わせ完了ページ
 Route::post('/register', [ConsumerController::class, 'register']);
-// お問い合わせ完了ページ
-Route::get('/thanks', [ConsumerController::class, 'show']);

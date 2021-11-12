@@ -1,4 +1,3 @@
-{{-- @yield('header') --}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-{{-- @yield('content') --}}
 <body>
     <form action="/register" method="POST">
         @csrf
