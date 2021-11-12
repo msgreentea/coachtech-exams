@@ -1,3 +1,4 @@
+{{-- @yield('header') --}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+{{-- @yield('content') --}}
 <body>
-    <form action="/thank" method="POST">
+    <form action="/register" method="POST">
         @csrf
         <div class="name">
             <label for="name">氏名<br>

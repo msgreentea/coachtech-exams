@@ -11,29 +11,23 @@ class ConsumerController extends Controller
     {
         return view('index');
     }
-    public function register(Request $request)
+    public function register()
     {
         // $recipe = App\Recipe::create(['recipe_name' => 'カレーライス']);
         // laravel応用７章参照した
         // $items = item::all();
         // Item::all($form);
 
-        // Itemのmodelクラスのインスタンスを生成
-        $item = new Item();
-        // データベースに値をinsert。
-        $item->create([
-            'name' => 'testname',
-            'email' => 'test@gmail.com'
-        ]);
-        // ↓保存したデータを$modelに格納。バージョン
-        // $model = $user->create([
-        //     'name' => 'testname',
-        //     'email' => 'test@gmail.com'
-        // ]);
+        $name = request('name');
+        $email = request('email');
+        $post = new Item;
+        $posts = Item::all();
+        // $item = Item::orderBy('name', 'asc')->get();
         // ↓insertしたItemのデータを使いたい場合
         // dd($model->name) <-結果：testname
 
-        return view('thanks', ['item' => $item]);
+        // return view('thanks', ['posts' => $posts]);
+        return view('thanks', compact('posts'));
     }
     public function show(Request $request)
     {
