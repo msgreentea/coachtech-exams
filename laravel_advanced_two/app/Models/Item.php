@@ -12,7 +12,7 @@ class Item extends Model
     // テーブル名
     // protected $table = 'items';
     //  複数代入
-    protected $guarded = ['id'];
+    // fillableとguardedは同時に書かない
     protected $fillable = ['name', 'email'];
     // validation
     public static $rules = array(
